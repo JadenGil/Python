@@ -1,3 +1,23 @@
+download the online grader code.
+
+2. Understand how the three files and all the classes work together
+
+3. There are several things wrong with the grader 
+
+There is only one simple exercise in each lesson
+There is no way for students to enter the system and choose a subject to study
+4. Make a Question class which  has an __init__ that asks  the question and checks the answer. It will have a lesson and check method. You will have to change how check works
+
+5. Expand one of the lesson classes to have at least 3 different questions
+
+change how the object works to have a list of questions 
+
+6. Make these extra questions work for the Tammy testing script
+
+ 
+
+ 
+
 **Modify Authenticator.add_user() to require that passwords include at least one special character and one number.**
 
 In auth.py create two new exceptions:
