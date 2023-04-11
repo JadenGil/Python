@@ -1,0 +1,76 @@
+Week 10 Lab – Temperatures
+
+The purpose of this lab is to give you practice implementing properties on Python classes, and additional practice with class methods.  You will also get a lot of practice with error handling.
+
+You may optionally work with a partner on this lab.  If you do this, be sure that both student's names are in your module docstring and that a single partner submits to Canvas.  The other partner should submit a comment with the assignment indicating who they worked with
+
+Details
+Download/unzip the starter code and tests: week_10_lab.zipDownload week_10_lab.zip
+
+You will be modifying and submitting temperature.py
+
+Your task is to complete the Temperature class, so that it has properties celsius, fahrenheit, kelvin which represent a temperature in those units.  This will require conversions, the formulae for which are :
+
+Celsius to Kelvin: K = C + 273.15
+Kelvin to Celcius: C = K - 273.15
+Fahrenheit to Celcius: C = (F-32) (5/9)
+Celsius to Fahrenheit: F = C(9/5) + 32
+Fahrenheit to Kelvin: K = (F-32) (5/9) + 273.15
+Kelvin to Fahrenheit: F = (K-273.15) (9/5) + 32
+Specifically you must
+
+Implement the initializer for Temperature according to the docstring
+Store the temperature internally as degrees celsius
+Create appropriate properties, so that it is possible to get and set temperatures using the above mentioned attributes: celsius, fahrenheit, kelvin 
+Implement the class method average according to the docstring
+ 
+
+Hint: if you implement the property setters appropriately you should be able to leverage those from your initializer.
+
+I recommend implementing the setters and getters for celsius first and using the testing scripts I provide before adding fahrenheit and kelvin.  Please see the included video for more information.
+
+Sample Usage
+>>> temperature = Temperature("287.4K")
+>>> print(temperature.celsius, temperature.fahrenheit, temperature.kelvin)
+14.25 57.65 287.4
+>>> temperature2 = Temperature(27.5)
+>>> print(temperature2.celsius, temperature2.fahrenheit, temperature2.kelvin)
+27.5 81.5 300.65
+>>> average_temperature = Temperature.average([temperature, temperature2])
+>>> print(average_temperature.celsius, average_temperature.fahrenheit, average_temperature.kelvin)
+20.875 69.575 294.025
+
+ 
+
+Test Script
+I have prepared a test script for you to verify your code is doing what it is supposed to.  This is included in the provided starter code.
+
+You can run the tests by running week10_tests.py
+
+ 
+
+Coding Standard / Linter
+Remember:
+
+All code is expected to follow the PEP8 style guide and PEP257 docstring conventions.
+All submitted files must include your header + statement of authenticity.  This should go in the module level docstring.  Failure to include this may result in an automatic 0!
+"""DESCRIPTION OF THE MODULE GOES HERE
+
+Author: Test Student
+Class: CSI-260-02
+Assignment: Week 8 Lab
+Due Date: March 8, 2019 11:59 PM
+
+Certification of Authenticity:
+I certify that this is entirely my own work, except where I have given
+fully-documented references to the work of others. I understand the definition
+and consequences of plagiarism and acknowledge that the assessor of this
+assignment may, for the purpose of assessing this assignment:
+- Reproduce this assignment and provide a copy to another member of academic
+- staff; and/or Communicate a copy of this assignment to a plagiarism checking
+- service (which may then retain a copy of this assignment on its database for
+- the purpose of future plagiarism checking)
+"""
+In order to help verify you are following these criteria the test script will use a linter+ additional checks to analyze your code.  Specifically it uses flake8 with the pep8-naming and flake8-docstrings  plugins.  If you do not have these installed the test script will instruct you to do so by running:
+
+pip install flake8 pep8-naming flake8-docstrings
